@@ -1,0 +1,40 @@
+/* Taskbar.module.css */
+.taskbar {
+  background-color: #017ACD;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  border-top: 1px solid #1a1717;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+}
+
+.rightSection {
+  background-color: #3b91ca;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-left: auto; 
+}
+
+.rightSection:hover {
+cursor: pointer;
+opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .clock-container {
+    font-size: 16px; 
+    margin-left: 0; 
+  }
+}

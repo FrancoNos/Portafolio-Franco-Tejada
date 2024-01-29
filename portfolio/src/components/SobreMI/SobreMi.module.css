@@ -1,0 +1,15 @@
+/* SobreMi.module.css */
+.sobreMiContainer {
+    position: fixed;
+    top: 10px; /* Ajusta según sea necesario para la distancia desde la parte superior */
+    left: 10px; /* Ajusta según sea necesario para la distancia desde la izquierda */
+  }
+  
+  .iconoSobreMi {
+    width: 70px;
+    height: 70px;
+    /* Agrega otros estilos según sea necesario */
+  }
+
+  .iconoSobreMi:hover{ cursor: pointer;
+    opacity: 0.9; } 

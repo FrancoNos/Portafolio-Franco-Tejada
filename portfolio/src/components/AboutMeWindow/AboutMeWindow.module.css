@@ -1,0 +1,30 @@
+/* AboutMeWindow.module.css */
+.aboutMeWindow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Usa porcentaje para hacerlo responsive */
+  max-width: 400px; /* Establece un ancho máximo para pantallas grandes */
+  background-color: #ffffff;
+  padding: 16px;
+  border: 1px solid #000000;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  margin-top: 16px;
+}
+
+/* Media query para hacerlo responsive en pantallas más pequeñas */
+@media (max-width: 600px) {
+  .aboutMeWindow {
+    width: 90%; /* Ajusta según sea necesario para pantallas pequeñas */
+  }
+}
