@@ -1,0 +1,20 @@
+:root {
+  --distancia-entre-iconos: 120px; /* Ajusta la distancia según tus necesidades */
+}
+
+.iconoContactoContainer {
+  position: fixed;
+  top: calc(10px + var(--distancia-entre-iconos));
+  left: 10px;
+}
+
+.iconoContacto {
+  width: 70px;
+  height: 70px;
+  /* Agrega otros estilos según sea necesario */
+}
+
+.iconoContacto:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}

@@ -1,18 +1,16 @@
-
-
-.sobreMiContainer {
+.iconoProjectsContainer {
   position: fixed;
-  top: 10px;
+  top: calc(10px + (2 * var(--distancia-entre-iconos)));
   left: 10px;
 }
 
-.iconoSobreMi {
+.iconoProjects {
   width: 70px;
   height: 70px;
   /* Agrega otros estilos según sea necesario */
 }
 
-.iconoSobreMi:hover {
+.iconoProjects:hover {
   cursor: pointer;
   opacity: 0.9;
 }

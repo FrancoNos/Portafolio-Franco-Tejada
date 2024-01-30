@@ -1,7 +1,7 @@
 // StartButton.js
 import React from 'react';
 import styles from './StartButton.module.css';
-import Inicio from "../../../public/images/Inicio.jpg";
+import Inicio from "/images/Inicio.jpg";
 
 const StartButton = () => {
   return (

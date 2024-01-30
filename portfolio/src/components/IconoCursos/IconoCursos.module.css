@@ -1,0 +1,18 @@
+
+  .iconoCursosContainer {
+    position: fixed;
+    top: calc(10px + (3 * var(--distancia-entre-iconos)));
+    left: 10px;
+  }
+  
+  .iconoCursos {
+    width: 70px;
+    height: 70px;
+    /* Agrega otros estilos según sea necesario */
+  }
+  
+  .iconoCursos:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  
