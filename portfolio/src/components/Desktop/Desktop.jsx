@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import styles from './Desktop.module.css';
 import Wallpaper from "../../../public/images/Wallpaper.jpg";
 import Taskbar from '../Taskbar/Taskbar';
-import SobreMi from '../SobreMI/SobreMi';
+import SobreMi from './SobreMI/SobreMi';
 import AboutMeWindow from '../AboutMeWindow/AboutMeWindow';
 import CursosWindow from '../CursosWindow/CursosWindow';
 import ContactWindow from '../ContactWindow/ContactWindow';
