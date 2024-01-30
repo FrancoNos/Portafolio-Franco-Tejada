@@ -2,11 +2,16 @@
 import React from 'react';
 import styles from './TaskbarWindows.module.css';
 
-const windowNames = {
-  aboutMe: 'Sobre mi',
-  contact: 'Contacto',
-  projects: 'Proyectos',
-  cursos: 'Cursos',
+import ImagenContacto from '../../../public/images/contact.png';
+import ImagenCursos from '../../../public/images/cursos.png';
+import ImagenSobreMi from '../../../public/images/papelera.png';
+import ImagenProyectos from '../../../public/images/projects.png';
+
+const windowIcons = {
+  aboutMe: ImagenSobreMi,
+  contact: ImagenContacto,
+  projects: ImagenProyectos,
+  cursos: ImagenCursos,
   // Agrega más nombres según sea necesario
 };
 
@@ -33,7 +38,8 @@ const TaskbarWindows = ({ windows, activeWindow, setActiveWindow, closeWindow })
               closeWindow();
             }}
           >
-            {windowNames[windowId] || windowId}
+            {/* Reemplaza el texto con la imagen correspondiente */}
+            <img src={windowIcons[windowId]} alt={windowId} />
           </div>
         )
       ))}

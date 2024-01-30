@@ -1,29 +1,52 @@
+/* projectsWindow.module.css */
 .projectsWindow {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 400px;
-    background-color: #ffffff;
-    padding: 16px;
-    border: 1px solid #000000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+  background-color: #4c9ef9; /* Azul celeste */
+  padding: 16px;
+  border: 2px solid #009688; /* Verde oscuro */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, sans-serif; /* Fuentes comunes en Windows */
+  color: #333333; /* Color del texto principal */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2e5aac; /* Azul oscuro */
+  color: #ffffff;
+  padding: 8px;
+  border-bottom: 2px solid #009688;
+  border-radius: 6px 6px 0 0;
+}
+
+/* Estilo para el botón de cerrar */
+.closeButton {
+  cursor: pointer;
+  background-color: #ff0000; /* Rojo característico de Windows XP para el botón de cerrar */
+  color: #ffffff;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+.closeButton:hover {
+  background-color: #ff5050; /* Cambia el color al pasar el ratón sobre el botón */
+}
+
+.content {
+  margin-top: 16px;
+}
+
+/* Media query para hacerlo responsive en pantallas más pequeñas */
+@media (max-width: 600px) {
+  .projectsWindow {
+    width: 90%;
   }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .content {
-    margin-top: 16px;
-  }
-  
-  /* Media query para hacerlo responsive en pantallas más pequeñas */
-  @media (max-width: 600px) {
-    .projectsWindow {
-      width: 90%;
-    }
-  }
-  
+}
