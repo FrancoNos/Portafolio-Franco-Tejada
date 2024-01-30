@@ -8,7 +8,7 @@ import AboutMeWindow from '../AboutMeWindow/AboutMeWindow';
 import CursosWindow from '../CursosWindow/CursosWindow';
 import ContactWindow from '../ContactWindow/ContactWindow';
 import ProjectsWindow from '../ProjectsWindow/ProjectsWindow';
-import IconoContacto from '../Contact/contact';
+import IconoContacto from '../Contact/Contact';
 import IconoProjects from '../Projects/IconoProjects ';
 import IconoCursos from '../IconoCursos/IconoCursos';
 
