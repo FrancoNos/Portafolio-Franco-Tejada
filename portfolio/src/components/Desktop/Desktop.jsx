@@ -1,7 +1,7 @@
 // Desktop.jsx
 import React, { useState } from 'react';
 import styles from './Desktop.module.css';
-import Wallpaper from "../../../public/images/Wallpaper.jpg"
+import Wallpaper from "../../../public/images/Wallpaper.jpg";
 import Taskbar from '../Taskbar/Taskbar';
 import SobreMi from '../SobreMI/sobreMi';
 import AboutMeWindow from '../AboutMeWindow/AboutMeWindow';

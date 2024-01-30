@@ -22,18 +22,18 @@
 }
 
 .midSection {
-  position: relative; /* Añade display: flex para que los elementos dentro de rightSection sean flexibles */
- 
+  position: relative;
+  display: flex;
   align-items: center;
-  flex-grow: 1; /* Hace que el midSection ocupe todo el espacio disponible */
-  margin-left: 8px; /* Añade un margen izquierdo para separar midSection y rightSection */
+  flex-grow: 1;
+  margin-left: 8px;
 }
 
 .rightSection {
   background-color: #3b91ca;
   padding: 8px 12px;
   border-radius: 4px;
-  position: relative; /* Añade display: flex para que los elementos dentro de rightSection sean flexibles */
+  position: relative;
   left: 10px;
 }
 
@@ -49,17 +49,17 @@
 
   .midSection {
     display: flex;
-   height: 45px;
-    align-self:normal; /* Estira el elemento verticalmente para ocupar tanto arriba como abajo */
+    height: 50px;
+    align-self: normal;
     position: relative;
     right: 50px;
   }
-  
 
   .rightSection {
-    flex-direction: column; /* Cambia la dirección a columna para evitar que los elementos se superpongan */
+    flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centra los elementos verticalmente en pantallas más pequeñas */
-    margin-left: 0; /* Elimina el margen izquierdo para mantener un diseño más limpio en pantallas más pequeñas */
+    justify-content: center;
+    margin-left: 0;
+    left: 0; /* Ajusta el valor de left para evitar un desplazamiento lateral */
   }
 }
