@@ -11,11 +11,18 @@ const StartButton = () => {
     const newIsStartMenuOpen = !isStartMenuOpen;
     setIsStartMenuOpen(newIsStartMenuOpen);
 
+    // Agrega console.log para saber si está abriendo o cerrando
+    console.log(`Start Menu ${newIsStartMenuOpen ? 'abierto' : 'cerrado'}`);
   };
 
   return (
-    <div className={styles.startButton} onClick={toggleStartMenu}>
-      <img src={Inicio} alt="Inicio" className={styles.startIcon} />
+    <div className={styles.startButton}>
+      <img
+        src={Inicio}
+        alt="Inicio"
+        className={styles.startIcon}
+        onClick={toggleStartMenu}
+      />
       {isStartMenuOpen && <StartMenu onClose={toggleStartMenu} />}
     </div>
   );

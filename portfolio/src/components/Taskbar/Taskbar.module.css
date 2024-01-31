@@ -16,10 +16,7 @@
   border-top: 1px solid #1a1717;
 }
 
-.leftSection {
-  display: flex;
-  align-items: center;
-}
+
 
 .midSection {
   position: relative;
@@ -60,6 +57,6 @@
     align-items: center;
     justify-content: center;
     margin-left: 0;
-    left: 0; /* Ajusta el valor de left para evitar un desplazamiento lateral */
+    left: 0; 
   }
 }
