@@ -1,0 +1,58 @@
+/* StartMenu.module.css */
+.startMenu {
+    position: fixed;
+    bottom: 40px;
+    left: 10px;
+    width: 200px;
+    background-color: #2e7d32; /* Verde oscuro */
+    padding: 8px;
+    border: 2px solid #1565c0; /* Azul oscuro */
+    border-radius: 6px;
+    z-index: 1001;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.menuContent {
+    color: #ffffff;
+}
+
+.menuContent p {
+    margin: 0;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.menuContent p:hover {
+    background-color: #1565c0;
+}
+
+.closeButton {
+    background-color: #1565c0;
+    color: #ffffff;
+    border: none;
+    padding: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.closeButton:hover {
+    background-color: #0d3d87;
+}
+
+@media (max-width: 480px) {
+    .startMenu {
+        width: 150px;
+        font-size: 10px;
+    }
+
+    .menuContent p {
+        padding: 3px;
+    }
+
+    .closeButton {
+        padding: 6px;
+    }
+}
