@@ -7,6 +7,7 @@ const IconoCursos = ({ onClick }) => {
   return (
     <div className={styles.iconoCursosContainer} onClick={onClick}>
       <img src={iconoCursosImage} alt="Icono Cursos" className={styles.iconoCursos} />
+      <p className={styles.label}>Cursos</p>
     </div>
   );
 };

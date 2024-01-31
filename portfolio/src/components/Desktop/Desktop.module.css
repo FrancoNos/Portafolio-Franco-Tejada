@@ -1,5 +1,6 @@
+/* Desktop.module.css */
 .desktop {
-  height: 100vh; 
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -7,17 +8,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  z-index: -1; /* Asegura que el wallpaper esté detrás de otros elementos */
 }
 
 @media (max-width: 768px) {
   .desktop {
-    height: auto; 
-  }
-
-  .wallpaper {
-    background-attachment: fixed;
+    height: 100vh; /* Ajusta según sea necesario */
   }
 }
