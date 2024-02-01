@@ -1,17 +1,22 @@
-// StartMenu.jsx
-import React, { useRef } from 'react';
+import React from 'react';
 import styles from './StartMenu.module.css';
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaBusinessTime } from "react-icons/fa";
-
+import { FaLinkedin, FaGithub, FaBusinessTime } from 'react-icons/fa';
+import { useSpring, animated } from 'react-spring';
 
 const StartMenu = ({ onClose }) => {
+  const animationProps = useSpring({
+    opacity: 1,
+    transform: 'translate(0, 0) scale(1)',
+    from: { opacity: 0, transform: 'translate(0, 0) scale(0.8)' },
+    config: { tension: 300, friction: 20 },
+  });
+  
+
   const openLink = (url) => {
     const link = document.createElement('a');
     link.href = url;
     link.target = '_blank';
-    link.rel = 'noopener noreferrer'; // Añadir noreferrer por seguridad
+    link.rel = 'noopener noreferrer';
     link.click();
   };
 
@@ -23,27 +28,26 @@ const StartMenu = ({ onClose }) => {
     openLink('https://github.com/FrancoNos');
   };
 
-const downloadCV = () => {
-  const cvPath = 'https://drive.google.com/uc?id=1p2srSttH3NNWQM161glDxIDcxQlFbpdz';
+  const downloadCV = () => {
+    const cvPath = 'https://drive.google.com/uc?id=1p2srSttH3NNWQM161glDxIDcxQlFbpdz';
 
-  const link = document.createElement('a');
-  link.href = cvPath;
-  link.target = '_blank';
-  link.rel = 'noopener noreferrer';
-  link.click();
-};
-
+    const link = document.createElement('a');
+    link.href = cvPath;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.click();
+  };
 
   return (
-    <div className={styles.startMenu}>
+    <animated.div style={animationProps} className={styles.startMenu}>
       <div className={styles.menuContent}>
         <p onClick={openLinkedIn}><FaLinkedin />LinkedIn</p>
         <p onClick={openGitHub}><FaGithub />GitHub</p>
         <p onClick={downloadCV}><FaBusinessTime />Descargar CV</p>
       </div>
-     
-    </div>
+    </animated.div>
   );
 };
 
 export default StartMenu;
+
