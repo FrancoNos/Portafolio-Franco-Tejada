@@ -15,19 +15,24 @@ const windowIcons = {
   // Agrega más nombres según sea necesario
 };
 
+const windowTexts = {
+  aboutMe: "Sobre Mí",
+  contact: "Contacto",
+  projects: "Proyectos",
+  cursos: "Cursos",
+  // Agrega más nombres según sea necesario
+};
+
 const TaskbarWindows = ({ windows, activeWindow, setActiveWindow, closeWindow }) => {
-  // Asegúrate de que windows sea un array o inicialízalo como un array vacío
   const windowList = windows || [];
 
-  // Verifica si hay ventanas abiertas antes de renderizar
   if (windowList.length === 0) {
-    return null; // No renderiza nada si no hay ventanas abiertas
+    return null;
   }
 
   return (
     <div className={styles.taskbarWindows}>
       {windowList.map((windowId) => (
-        // Verifica si windowId es null antes de renderizar
         windowId !== null && (
           <div
             key={windowId}
@@ -38,8 +43,9 @@ const TaskbarWindows = ({ windows, activeWindow, setActiveWindow, closeWindow })
               closeWindow();
             }}
           >
-            {/* Reemplaza el texto con la imagen correspondiente */}
+            {/* Muestra el texto junto al icono */}
             <img src={windowIcons[windowId]} alt={windowId} />
+            <span>{windowTexts[windowId]}</span>
           </div>
         )
       ))}

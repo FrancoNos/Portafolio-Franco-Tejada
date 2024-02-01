@@ -2,7 +2,7 @@
 .startMenu {
     position: fixed;
     bottom: 40px;
-    left: 10px;
+    left: 1.5px;
     width: 300px; /* Ajusta según sea necesario */
     background-color: #2e7d32; /* Verde oscuro */
     padding: 16px; /* Ajusta según sea necesario */

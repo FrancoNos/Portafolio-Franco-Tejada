@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './StartMenu.module.css';
-import { FaLinkedin, FaGithub, FaBusinessTime } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaBusinessTime, FaWhatsapp } from 'react-icons/fa';
 import { useSpring, animated } from 'react-spring';
 
 const StartMenu = ({ onClose }) => {
@@ -10,6 +10,14 @@ const StartMenu = ({ onClose }) => {
     from: { opacity: 0, transform: 'translate(0, 0) scale(0.8)' },
     config: { tension: 300, friction: 20 },
   });
+
+  const openWhatsApp = () => {
+   
+    const phoneNumber = "5491173669270";
+    const whatsappLink = `https://wa.me/${phoneNumber}`;
+  
+    openLink(whatsappLink);
+  };
   
 
   const openLink = (url) => {
@@ -41,6 +49,7 @@ const StartMenu = ({ onClose }) => {
   return (
     <animated.div style={animationProps} className={styles.startMenu}>
       <div className={styles.menuContent}>
+      <p onClick={openWhatsApp}><FaWhatsapp />¡Contáctame por WhatsApp!</p>
         <p onClick={openLinkedIn}><FaLinkedin />LinkedIn</p>
         <p onClick={openGitHub}><FaGithub />GitHub</p>
         <p onClick={downloadCV}><FaBusinessTime />Descargar CV</p>
