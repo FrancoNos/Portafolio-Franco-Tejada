@@ -1,22 +1,34 @@
 // StartButton.js
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './StartButton.module.css';
 import Inicio from "/images/Inicio.jpg";
 import StartMenu from '../StartMenu/StartMenu';
 
 const StartButton = () => {
   const [isStartMenuOpen, setIsStartMenuOpen] = useState(false);
+  const startButtonRef = useRef(null);
 
   const toggleStartMenu = () => {
-    const newIsStartMenuOpen = !isStartMenuOpen;
-    setIsStartMenuOpen(newIsStartMenuOpen);
-
-    // Agrega console.log para saber si está abriendo o cerrando
-    console.log(`Start Menu ${newIsStartMenuOpen ? 'abierto' : 'cerrado'}`);
+    setIsStartMenuOpen((prev) => !prev);
   };
 
+  const handleDocumentClick = (event) => {
+    if (startButtonRef.current && !startButtonRef.current.contains(event.target)) {
+      // Cerrar el menú si se hace clic fuera del botón de inicio
+      setIsStartMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleDocumentClick);
+
+    return () => {
+      document.removeEventListener('click', handleDocumentClick);
+    };
+  }, []);
+
   return (
-    <div className={styles.startButton}>
+    <div className={styles.startButton} ref={startButtonRef}>
       <img
         src={Inicio}
         alt="Inicio"

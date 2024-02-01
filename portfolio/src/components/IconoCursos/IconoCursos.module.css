@@ -1,8 +1,8 @@
 /* IconoCursos.module.css */
 .iconoCursosContainer {
   position: fixed;
-  top: calc(10px + (3 * var(--distancia-entre-iconos)));
-  left: 10px;
+  top: 10px;
+  left: 120px;
   text-align: center;
 }
 

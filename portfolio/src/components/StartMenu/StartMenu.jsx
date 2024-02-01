@@ -1,6 +1,10 @@
 // StartMenu.jsx
 import React, { useRef } from 'react';
 import styles from './StartMenu.module.css';
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaBusinessTime } from "react-icons/fa";
+
 
 const StartMenu = ({ onClose }) => {
   const openLink = (url) => {
@@ -33,13 +37,11 @@ const downloadCV = () => {
   return (
     <div className={styles.startMenu}>
       <div className={styles.menuContent}>
-        <p onClick={openLinkedIn}>LinkedIn</p>
-        <p onClick={openGitHub}>GitHub</p>
-        <p onClick={downloadCV}>Descargar CV</p>
+        <p onClick={openLinkedIn}><FaLinkedin />LinkedIn</p>
+        <p onClick={openGitHub}><FaGithub />GitHub</p>
+        <p onClick={downloadCV}><FaBusinessTime />Descargar CV</p>
       </div>
-      <button className={styles.closeButton} onClick={onClose}>
-        Cerrar
-      </button>
+     
     </div>
   );
 };

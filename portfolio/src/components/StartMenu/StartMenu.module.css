@@ -3,56 +3,54 @@
     position: fixed;
     bottom: 40px;
     left: 10px;
-    width: 200px;
+    width: 300px; /* Ajusta según sea necesario */
     background-color: #2e7d32; /* Verde oscuro */
-    padding: 8px;
+    padding: 16px; /* Ajusta según sea necesario */
     border: 2px solid #1565c0; /* Azul oscuro */
-    border-radius: 6px;
+    border-radius: 10px; /* Ajusta según sea necesario */
     z-index: 1001;
     font-family: 'Tahoma', sans-serif;
-    font-size: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.menuContent {
-    color: #ffffff;
+    font-size: 16px; /* Ajusta según sea necesario */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ajusta según sea necesario */
 }
 
 .menuContent p {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Ajusta según sea necesario */
     margin: 0;
-    padding: 4px;
+    padding: 8px;
     cursor: pointer;
 }
+
+.menuContent p svg {
+    width: 24px; /* Ajusta según sea necesario */
+    height: 24px; /* Ajusta según sea necesario */
+}
+
+
 
 .menuContent p:hover {
     background-color: #1565c0;
 }
 
-.closeButton {
-    background-color: #1565c0;
-    color: #ffffff;
-    border: none;
-    padding: 8px;
-    margin-top: 8px;
-    cursor: pointer;
-    border-radius: 4px;
-}
 
-.closeButton:hover {
-    background-color: #0d3d87;
-}
 
 @media (max-width: 480px) {
     .startMenu {
-        width: 150px;
-        font-size: 10px;
+        width: 300px; /* Ajusta según sea necesario */
+        height: 200px;
+        font-size: 14px; /* Ajusta según sea necesario */
+        padding: 12px; /* Ajusta según sea necesario */
     }
 
     .menuContent p {
-        padding: 3px;
+        padding: 12px; /* Ajusta según sea necesario */
+        font-size: 18px; /* Ajusta según sea necesario */
     }
 
-    .closeButton {
-        padding: 6px;
+    .menuContent p svg {
+        width: 30px; /* Ajusta según sea necesario */
+        height: 30px; /* Ajusta según sea necesario */
     }
 }
