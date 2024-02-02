@@ -1,4 +1,3 @@
-/* AboutMeWindow.module.css */
 .aboutMeWindow {
   position: fixed;
   top: 50%;
@@ -6,52 +5,116 @@
   transform: translate(-50%, -50%);
   width: 80%;
   max-width: 400px;
-  background-color: #4c9ef9; /* Azul celeste */
+  background-color: #8ab8ec; 
   padding: 16px;
-  border: 2px solid #009688; /* Verde oscuro */
+  border: 2px solid #009688;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
-  font-family: 'Segoe UI', Tahoma, sans-serif; /* Fuentes comunes en Windows */
-  color: #333333; /* Color del texto principal */
+  font-family: 'Segoe UI', Tahoma, sans-serif; 
+  color: #333333; 
 }
 
-.header {
+.titleContainer {
+  
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  background-color: #8ab8ec; /* Azul más suave */
+  border-bottom: 2px solid #64a2d8; /* Línea inferior para simular el estilo de Windows XP */
+  cursor: pointer;
+  
+}
+
+.titleContainer span {
+  margin-left: 10px; /* Ajusta el valor según sea necesario */
+}
+
+.iconContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.iconContainer svg {
+  flex-basis: calc(33.33% - 8px); /* Calcula el ancho para tres columnas con espacio entre ellas */
+  margin-bottom: 8px; /* Ajusta el margen inferior entre las filas según sea necesario */
+  font-size: 44px;
+}
+
+
+.closeButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  top: 0;
+  right: 0;
+  background-color: #ff0000;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 4px 8px 4px;
+  width: 28px;
+  height: 28px;
+  margin-left: auto;
+  margin-right: 4px;
+}
+
+.closeButton:hover {
+  background-color: #cc0000;
+}
+
+
+.contentContainer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background-color: #2e5aac; /* Azul oscuro */
-  color: #ffffff;
-  padding: 8px;
-  border-bottom: 2px solid #009688;
-  border-radius: 6px 6px 0 0;
-}
-
-/* Añade estilos para el botón de cerrar */
-/* Modifica estilos para el botón de cerrar */
-/* Modifica estilos para el botón de cerrar */
-.closeButton {
-  display: flex;
-  align-items: center; /* Centra verticalmente los elementos en el contenedor */
-  background-color: #ff0000; /* Fondo rojo */
-  border: none;
-  border-radius: 4px; /* Bordes redondeados */
-  color: #ffffff; /* Color del texto (la "X" en este caso) */
-  cursor: pointer;
-  font-size: 1em; /* Tamaño del icono */
-  padding: 4px 8px; /* Añade espacio alrededor del texto/icono */
-}
-
-/* Cambia el color del botón al pasar el ratón sobre él */
-.closeButton:hover {
-  background-color: #cc0000; /* Un tono más oscuro de rojo al pasar el ratón sobre el botón */
-}
-
-
-.content {
   margin-top: 16px;
 }
 
-/* Media query para hacerlo responsive en pantallas más pequeñas */
+.content, .content2 {
+  margin-top: 16px;
+  flex: 1;
+  background-color: #d4e8fc; /* Fondo similar a Windows XP */
+  border: 1px solid #a0a0a0; /* Borde similar a Windows XP */
+  border-radius: 4px;
+  padding: 8px;
+  text-align: center;
+}
+
+.content2 {
+  margin-left: 16px; /* Separación entre las dos columnas */
+  background-color:#ffffff;
+  display: flex;
+  flex-direction: column; /* Alinea los elementos verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; 
+}
+
+.content, .content2 .text{
+  font-family: 'Tahoma', sans-serif;
+
+}
+
+.content2 .text{
+  font-family: 'Tahoma', sans-serif;
+  bottom:20px;
+position: relative;
+}
+
+.content2 img{
+  width: 50px; 
+  height: auto; 
+  max-width: 50px;
+  display: block;
+ cursor: pointer;
+
+}
+
 @media (max-width: 600px) {
   .aboutMeWindow {
     width: 90%;
