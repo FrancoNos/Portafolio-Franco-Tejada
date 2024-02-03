@@ -1,3 +1,5 @@
+/* AboruMewidowm.module.css
+ */
 .aboutMeWindow {
   position: fixed;
   top: 50%;
@@ -5,7 +7,7 @@
   transform: translate(-50%, -50%);
   width: 80%;
   max-width: 400px;
-  background-color: #8ab8ec; 
+  background-color: #f1f1e3; 
   padding: 16px;
   border: 2px solid #009688;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);

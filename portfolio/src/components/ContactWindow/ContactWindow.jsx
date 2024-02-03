@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { FaTimes } from 'react-icons/fa';
-import emailjs from 'emailjs-com';
 import styles from './ContactWindow.module.css';
+import useMoveWindow from '../useMoveWidow';
+import emailjs from 'emailjs-com'; // Asegúrate de importar emailjs
 
 const ContactWindow = ({ onClose }) => {
   const animationProps = useSpring({
@@ -12,8 +13,11 @@ const ContactWindow = ({ onClose }) => {
     config: { tension: 300, friction: 20 },
   });
 
+  const windowRef = useRef();
+  const moveHandler = useMoveWindow({ id: 'contactWindow', focus: () => {}, onClose }, windowRef);
+
   const [formData, setFormData] = useState({
-    name: '', // Agrega el campo 'name' al formulario
+    name: '',
     email: '',
     subject: '',
     message: '',
@@ -49,65 +53,57 @@ const ContactWindow = ({ onClose }) => {
       emailData,
       emailjsConfig.userId
     )
-    .then((response) => {
-      console.log('Email enviado con éxito:', response);
-    })
-    .catch((error) => {
-      console.error('Error al enviar el email:', error);
-    });
+      .then((response) => {
+        console.log('Email enviado con éxito:', response);
+      })
+      .catch((error) => {
+        console.error('Error al enviar el email:', error);
+      });
   };
 
   return (
-    <animated.div style={animationProps} className={styles.contactWindow}>
-      <div className={styles.header}>
+    <animated.div ref={windowRef} style={animationProps} className={styles.contactWindow}>
+      <div className={styles.titleContainer} onMouseDown={moveHandler.onMouseDown}>
         <span>Contacto</span>
         <button onClick={onClose} className={styles.closeButton}>
           <FaTimes />
         </button>
       </div>
-      <div className={styles.content}>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="name">Nombre:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+      <div className={styles.contentContainer}>
+        <div className={styles.content}>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="name">Nombre:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
 
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
 
-          <label htmlFor="subject">Asunto:</label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            value={formData.subject}
-            onChange={handleChange}
-            required
-          />
+            <label htmlFor="message">Mensaje:</label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
 
-          <label htmlFor="message">Mensaje:</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          ></textarea>
-
-          <button type="submit">Enviar</button>
-        </form>
+            <button className={styles.buttonEnviar} type="submit">Enviar</button>
+          </form>
+        </div>
       </div>
     </animated.div>
   );

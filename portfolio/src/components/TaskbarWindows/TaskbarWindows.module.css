@@ -36,14 +36,14 @@
   .window {
     width: 100%;
     height: 30px;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     padding: 0px; /* Ajuste del padding para dispositivos móviles */
   }
 
   .window img {
     width: 30px;
     height: 30px;
-    margin-right: 8px; /* Ajustado el margen derecho en dispositivos móviles */
+    margin-left: 8px; /* Ajustado el margen derecho en dispositivos móviles */
   }
 
   .window span {
