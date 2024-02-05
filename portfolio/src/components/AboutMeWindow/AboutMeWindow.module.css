@@ -35,18 +35,6 @@
   margin-left: 10px; /* Ajusta el valor según sea necesario */
 }
 
-.iconContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.iconContainer svg {
-  flex-basis: calc(33.33% - 8px); /* Calcula el ancho para tres columnas con espacio entre ellas */
-  margin-bottom: 8px; /* Ajusta el margen inferior entre las filas según sea necesario */
-  font-size: 44px;
-}
-
 
 .closeButton {
   position: relative;

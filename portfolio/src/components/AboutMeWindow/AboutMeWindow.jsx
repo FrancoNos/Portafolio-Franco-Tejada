@@ -1,10 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { FaTimes } from 'react-icons/fa';
-import { FaReact, FaNodeJs } from 'react-icons/fa';
-import { SiExpress, SiNextdotjs, SiTypescript, SiSequelize, SiTailwindcss } from 'react-icons/si';
-import { BiLogoPostgresql } from 'react-icons/bi';
-import { IoLogoFirebase, IoLogoJavascript } from 'react-icons/io5';
 
 import styles from './AboutMeWindow.module.css';
 import useMoveWindow from '../useMoveWidow';
@@ -43,18 +39,9 @@ const AboutMeWindow = ({ onClose }) => {
         </div>
         <div className={styles.contentContainer}>
           <div className={styles.content}>
-            <p className={styles.text}>Technical Skills</p>
+            <p className={styles.text}>¿Quien soy?</p>
             <div className={styles.iconContainer}>
-              <IoLogoJavascript />
-              <FaReact />
-              <SiExpress />
-              <BiLogoPostgresql />
-              <FaNodeJs />
-              <SiNextdotjs />
-              <SiTypescript />
-              <IoLogoFirebase />
-              <SiSequelize />
-              <SiTailwindcss />
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quaerat, obcaecati ducimus, voluptate nesciunt sunt nostrum perspiciatis quas ipsum sapiente ullam quae necessitatibus ut consectetur tempora impedit asperiores quos ipsam!</p>
             </div>
           </div>
           <div className={styles.content2}>
