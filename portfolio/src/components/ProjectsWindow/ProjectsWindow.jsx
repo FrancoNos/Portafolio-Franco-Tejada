@@ -6,7 +6,8 @@ import styles from './ProjectsWindow.module.css';
 import useMoveWindow from '../useMoveWidow';
 import GolBookingWindow from "./ventanasProjects/GolBookingWindow";
 import NearbyTourWindow from './ventanasProjects/NearbyTourWindow';
-import CarCodeWindow from './ventanasProjects/CarCodeWindow'; // Ajusta la ruta según sea necesario
+import CarCodeWindow from './ventanasProjects/CarCodeWindow';
+import ProjectImage from "../../../public/images/project.png"
 
 const ProjectsWindow = ({ onClose }) => {
   const animationProps = useSpring({
@@ -60,9 +61,18 @@ const ProjectsWindow = ({ onClose }) => {
           <div className={styles.content}>
             <p>Proyectos en los que participé por medio de diferentes plataformas, en colaboración con equipos multidisciplinarios.</p>
             <ul>
-              <li onClick={openGolBookingWindow}>GolBooking</li>
-              <li onClick={openNearbyTourWindow}>NearbyTour</li>
-              <li onClick={openCarCodeWindow}>CarCode</li>
+              <li onClick={openGolBookingWindow}>
+                <img src={ProjectImage} alt="Project" className={styles.projectImage} />
+                GolBooking
+              </li>
+              <li onClick={openNearbyTourWindow}>
+                <img src={ProjectImage} alt="Project" className={styles.projectImage} />
+                NearbyTour
+              </li>
+              <li onClick={openCarCodeWindow}>
+                <img src={ProjectImage} alt="Project" className={styles.projectImage} />
+                CarCode
+              </li>
               {/* Agrega otros proyectos aquí */}
             </ul>
           </div>

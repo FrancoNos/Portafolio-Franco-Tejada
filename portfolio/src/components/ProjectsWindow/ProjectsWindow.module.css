@@ -1,4 +1,3 @@
-/* projectsWindow.module.css */
 .projectsWindow {
   position: fixed;
   top: 50%;
@@ -6,13 +5,13 @@
   transform: translate(-50%, -50%);
   width: 80%;
   max-width: 400px;
-  background-color: #f1f1e3;
+  background-color: #f1f1e3; 
   padding: 16px;
   border: 2px solid #009688;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  color: #000000; /* Mismo color de texto que ContactWindow */
+  font-family: 'Segoe UI', Tahoma, sans-serif; 
+  color: #333333; 
 }
 
 .titleContainer {
@@ -69,9 +68,34 @@
   margin-top: 16px;
   flex: 1;
   border-radius: 4px;
+  border: 1px solid #a0a0a0; /* Borde similar a Windows XP */
   padding: 8px;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column; /* Cambia a columna para alinear elementos verticalmente */
+}
 
+.content ul {
+  list-style: none; /* Quita los estilos de lista por defecto */
+  padding: 0; /* Elimina el relleno predeterminado de la lista */
+  display: flex;
+  flex-direction: row; /* Cambia a fila para alinear elementos horizontalmente */
+  justify-content: space-around; /* Espacia los elementos de la lista en el contenedor */
+  align-items: flex-start; /* Alinea los elementos en la parte superior del contenedor */
+}
+
+.content ul li {
+  cursor: pointer;
+  display: flex; /* Mantiene el diseño de fila para los elementos de la lista */
+  flex-direction: column; /* Cambia a columna para alinear elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+.projectImage {
+  margin-bottom: 8px; /* Añade espacio entre la imagen y el texto */
+  width: 50px; /* Ajusta el tamaño de la imagen según sea necesario */
+  height: auto;
 }
 
 /* Media query para hacerlo responsive en pantallas más pequeñas */
