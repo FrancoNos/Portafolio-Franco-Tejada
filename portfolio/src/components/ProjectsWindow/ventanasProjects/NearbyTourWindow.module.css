@@ -91,5 +91,10 @@
 @media (max-width: 600px) {
   .NeabyTourWindow {
     width: 90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
   }
+
+  .imageGolBookingContainer{display: none;}
 }
