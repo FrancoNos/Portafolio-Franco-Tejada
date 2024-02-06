@@ -1,11 +1,10 @@
-/* Desktop.module.css */
 .desktop {
   height: 100vh;
   overflow: hidden;
 }
 
 .wallpaper {
-  user-select: none; /* Evita que la imagen sea seleccionable */
+  user-select: none; 
   pointer-events: none; 
   width: 100%;
   height: 100%;
@@ -13,11 +12,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1; /* Asegura que el wallpaper esté detrás de otros elementos */
+  z-index: -1;
 }
 
 @media (max-width: 768px) {
   .desktop {
-    height: 100vh; /* Ajusta según sea necesario */
+    height: 100vh; 
   }
 }

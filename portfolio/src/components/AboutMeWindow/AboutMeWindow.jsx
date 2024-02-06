@@ -45,7 +45,8 @@ const AboutMeWindow = ({ onClose }) => {
             
             <h3 className={styles.text}>Portafolio Web <br/>Franco Tejada</h3>
             <div className={styles.iconContainer}>
-<p>¡Bienvenido a mi portafolio web! A la derecha, podrás explorar más sobre mí, mis pasiones y estudios. No olvides contactarme haciendo clic en "Contacto" o clickear en Inicio para encontrarme en otras redes.<br/> ¡Gracias por visitar mi página web!</p>
+<p className={styles.pCompu}>¡Bienvenido a mi portafolio web! A la derecha, podrás explorar más sobre mí, mis pasiones y estudios. No olvides contactarme haciendo clic en "Contacto" o clickear en Inicio para encontrarme en otras redes.<br/> ¡Gracias por visitar mi página web!</p>
+<p className={styles.pPC}>¡Bienvenido! A la derecha, podrás explorar más sobre mí. No olvides contactarme haciendo clic en "Contacto" o clickear en Inicio. <br/> ¡Gracias por la visita!</p>
             </div>
           </div>
           <div className={styles.content2}>

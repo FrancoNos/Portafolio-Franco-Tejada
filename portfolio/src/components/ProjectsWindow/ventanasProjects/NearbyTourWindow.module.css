@@ -22,16 +22,13 @@
   left: 0;
   width: 100%;
   height: 35px;
-  background-color: #3682da; /* Azul más suave */
-  border-bottom: 2px solid #64a2d8; /* Línea inferior para simular el estilo de Windows XP */
+  background-color: #8ab8ec; 
+  border-bottom: 2px solid #64a2d8; 
   cursor: pointer;
-  
 }
 
 .titleContainer span {
   margin-left: 10px;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .closeButton {
