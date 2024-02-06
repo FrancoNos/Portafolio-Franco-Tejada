@@ -4,6 +4,7 @@ import { FaTimes } from 'react-icons/fa';
 import styles from './ContactWindow.module.css';
 import useMoveWindow from '../useMoveWidow';
 import emailjs from 'emailjs-com'; 
+import iconoContacto from "../../../public/images/contact.png";
 
 const ContactWindow = ({ onClose }) => {
   const animationProps = useSpring({
@@ -69,6 +70,7 @@ const ContactWindow = ({ onClose }) => {
   return (
     <animated.div ref={windowRef} style={animationProps} className={styles.contactWindow}>
       <div className={styles.titleContainer} onMouseDown={moveHandler.onMouseDown}>
+      <img src={iconoContacto} alt="Icono Contacto" className={styles.iconoContacto} />
         <span>Contacto</span>
         <button onClick={onClose} className={styles.closeButton}>
           <FaTimes />

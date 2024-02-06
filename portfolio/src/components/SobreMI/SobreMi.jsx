@@ -1,4 +1,3 @@
-// SobreMi.js
 import React from 'react';
 import styles from './SobreMi.module.css';
 import iconoSobreMi from "../../../public/images/papelera.png";

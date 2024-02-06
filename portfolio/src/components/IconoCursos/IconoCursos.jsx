@@ -1,4 +1,3 @@
-// IconoCursos.js
 import React from 'react';
 import iconoCursosImage from "../../../public/images/cursos.png";
 import styles from './IconoCursos.module.css';

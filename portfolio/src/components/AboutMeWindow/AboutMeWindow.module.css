@@ -15,7 +15,6 @@
 }
 
 .titleContainer {
-  
   position: absolute;
   display: flex;
   align-items: center;
@@ -23,15 +22,18 @@
   left: 0;
   width: 100%;
   height: 35px;
-  background-color: #8ab8ec; /* Azul más suave */
+  background-color: #3682da; /* Azul más suave */
   border-bottom: 2px solid #64a2d8; /* Línea inferior para simular el estilo de Windows XP */
   cursor: pointer;
   
 }
 
 .titleContainer span {
-  margin-left: 10px; /* Ajusta el valor según sea necesario */
+  margin-left: 5px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 
 
 .closeButton {
@@ -100,6 +102,19 @@ position: relative;
   max-width: 50px;
   display: block;
  cursor: pointer;
+}
+
+p {
+  font-size: 16px; /* Tamaño de fuente */
+  line-height: 1.4; /* Altura de línea para mejorar la legibilidad */
+  color: #333; /* Color del texto */
+  margin-bottom: 20px; /* Margen inferior para separarlo de otros elementos */
+}
+
+.iconoSobreMi{
+  height: 20px;
+  width: 20px;
+  margin-left: 5px;
 
 }
 

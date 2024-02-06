@@ -6,6 +6,8 @@ import styles from './AboutMeWindow.module.css';
 import useMoveWindow from '../useMoveWidow';
 import TextImage from '../../../public/images/text.png';
 import TextWindow from "../TextWidow/TextWidow" 
+import iconoSobreMi from "../../../public/images/papelera.png";
+
 
 const AboutMeWindow = ({ onClose }) => {
   const animationProps = useSpring({
@@ -32,6 +34,7 @@ const AboutMeWindow = ({ onClose }) => {
     <>
       <animated.div ref={windowRef} style={animationProps} className={styles.aboutMeWindow}>
         <div className={styles.titleContainer} onMouseDown={moveHandler.onMouseDown}>
+        <img src={iconoSobreMi} alt="Icono Sobre Mí" className={styles.iconoSobreMi} />
           <span>¡Sobre Mí!</span>
           <button onClick={onClose} className={styles.closeButton}>
             <FaTimes />
@@ -39,9 +42,10 @@ const AboutMeWindow = ({ onClose }) => {
         </div>
         <div className={styles.contentContainer}>
           <div className={styles.content}>
-            <p className={styles.text}>¿Quien soy?</p>
+            
+            <h3 className={styles.text}>Portafolio Web <br/>Franco Tejada</h3>
             <div className={styles.iconContainer}>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quaerat, obcaecati ducimus, voluptate nesciunt sunt nostrum perspiciatis quas ipsum sapiente ullam quae necessitatibus ut consectetur tempora impedit asperiores quos ipsam!</p>
+<p>¡Bienvenido a mi portafolio web! A la derecha, podrás explorar más sobre mí, mis pasiones y estudios. No olvides contactarme haciendo clic en "Contacto" o clickear en Inicio para encontrarme en otras redes.<br/> ¡Gracias por visitar mi página web!</p>
             </div>
           </div>
           <div className={styles.content2}>

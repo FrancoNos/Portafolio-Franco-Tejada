@@ -1,6 +1,7 @@
 import React from 'react';
 import iconoContacto from "../../../public/images/contact.png";
 import styles from './Contact.module.css';
+
 const IconoContacto = ({ onClick }) => {
   return (
     <div className={styles.iconoContactoContainer} onClick={onClick}>

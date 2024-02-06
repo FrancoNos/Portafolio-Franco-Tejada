@@ -7,6 +7,7 @@ import GolBookingWindow from "./ventanasProjects/GolBookingWindow";
 import NearbyTourWindow from './ventanasProjects/NearbyTourWindow';
 import CarCodeWindow from './ventanasProjects/CarCodeWindow';
 import ProjectImage from "../../../public/images/project.png"
+import iconoProjectsImage from "../../../public/images/projects.png";
 
 const ProjectsWindow = ({ onClose }) => {
   const animationProps = useSpring({
@@ -51,6 +52,7 @@ const ProjectsWindow = ({ onClose }) => {
     <>
       <animated.div ref={windowRef} style={animationProps} className={styles.projectsWindow}>
         <div className={styles.titleContainer} onMouseDown={moveHandler.onMouseDown}>
+        <img src={iconoProjectsImage} alt="Icono Proyectos" className={styles.iconoProjectsImage} />
           <span>Proyectos</span>
           <button onClick={onClose} className={styles.closeButton}>
             <FaTimes />

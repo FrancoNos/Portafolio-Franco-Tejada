@@ -22,17 +22,16 @@
   left: 0;
   width: 100%;
   height: 35px;
-  background-color: #8ab8ec;
-  border-bottom: 2px solid #578dbd;
-  cursor: grab;
-}
-
-.titleContainer:active {
-  cursor: grabbing;
+  background-color: #3682da; /* Azul más suave */
+  border-bottom: 2px solid #64a2d8; /* Línea inferior para simular el estilo de Windows XP */
+  cursor: pointer;
+  
 }
 
 .titleContainer span {
-  margin-left: 10px;
+  margin-left: 5px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .closeButton {
@@ -96,6 +95,12 @@
   margin-bottom: 8px; /* Añade espacio entre la imagen y el texto */
   width: 50px; /* Ajusta el tamaño de la imagen según sea necesario */
   height: auto;
+}
+
+.iconoProjectsImage {
+  height: 20px;
+  width: 20px;
+  margin-left: 5px;
 }
 
 /* Media query para hacerlo responsive en pantallas más pequeñas */

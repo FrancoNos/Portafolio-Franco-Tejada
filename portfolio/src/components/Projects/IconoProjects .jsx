@@ -1,4 +1,3 @@
-// IconoProjects.js
 import React from 'react';
 import iconoProjectsImage from "../../../public/images/projects.png";
 import styles from './IconoProjects.module.css';
