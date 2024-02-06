@@ -6,13 +6,6 @@ const useMoveWindow = (props, windowRef) => {
 
   const handleMouseDown = (e) => {
     e.preventDefault();
-    setIsDragging(true);
-
-    // Obtén el zIndex actual de la ventana
-    const currentZIndex = parseInt(windowRef.current.style.zIndex || 1, 10);
-
-    // Establece un zIndex superior para que la ventana esté por delante de las demás
-    windowRef.current.style.zIndex = currentZIndex + 1;
 
     setOffset({
       x: e.clientX - windowRef.current.offsetLeft,
@@ -32,12 +25,16 @@ const useMoveWindow = (props, windowRef) => {
 
   const handleMouseUp = () => {
     setIsDragging(false);
-
-    // No restablece el zIndex aquí, para que el último componente movido mantenga su zIndex superior
   };
 
   useEffect(() => {
     if (isDragging) {
+      // Obtén el zIndex actual de la ventana
+      const currentZIndex = parseInt(windowRef.current.style.zIndex || 1, 10);
+
+      // Incrementa el zIndex solo cuando la ventana comienza a ser arrastrada
+      windowRef.current.style.zIndex = currentZIndex + 1;
+
       window.addEventListener('mousemove', handleMouseMove);
       window.addEventListener('mouseup', handleMouseUp);
     }
@@ -49,7 +46,10 @@ const useMoveWindow = (props, windowRef) => {
   }, [isDragging]);
 
   return {
-    onMouseDown: handleMouseDown,
+    onMouseDown: (e) => {
+      setIsDragging(true);
+      handleMouseDown(e);
+    },
   };
 };
 

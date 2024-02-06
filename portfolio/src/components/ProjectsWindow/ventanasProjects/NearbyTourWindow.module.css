@@ -1,8 +1,7 @@
-/* AboruMewidowm.module.css */
 .NeabyTourWindow {
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 45%;
+  left: 45%;
   transform: translate(-50%, -50%);
   width: 80%;
   max-width: 400px;
@@ -23,13 +22,13 @@
   left: 0;
   width: 100%;
   height: 35px;
-  background-color: #8ab8ec; /* Azul más suave */
-  border-bottom: 2px solid #64a2d8; /* Línea inferior para simular el estilo de Windows XP */
+  background-color: #8ab8ec; 
+  border-bottom: 2px solid #64a2d8; 
   cursor: pointer;
 }
 
 .titleContainer span {
-  margin-left: 10px; /* Ajusta el valor según sea necesario */
+  margin-left: 10px;
 }
 
 .closeButton {
@@ -65,22 +64,27 @@
 .content2 {
   margin-top: 16px;
   flex: 1;
-  background-color: #ffffff; /* Fondo similar a Windows XP */
-  border: 1px solid #a0a0a0; /* Borde similar a Windows XP */
+  background-color: #ffffff; 
+  border: 1px solid #a0a0a0;
   border-radius: 4px;
   text-align: center;
 }
 
 .imagegolBookingContainer {
-  max-width: 100%; /* Hace que la imagen sea responsiva y no se desborde del contenedor */
-  max-height: 200px; /* Establece la altura máxima de la imagen */
-  overflow: hidden; /* Recorta cualquier parte de la imagen que se desborde */
+  max-width: 100%; 
+  max-height: 200px; 
+  overflow: hidden; 
 }
 
 .golBookingImage {
-  width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
-  height: auto; /* Mantiene la proporción original de la imagen */
+  width: 100%;
+  height: auto;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.golBookingImage:hover {
+  transform: scale(1.1); 
 }
 
 

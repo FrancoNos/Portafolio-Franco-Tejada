@@ -3,7 +3,7 @@ import { useSpring, animated } from 'react-spring';
 import { FaTimes } from 'react-icons/fa';
 import styles from './ContactWindow.module.css';
 import useMoveWindow from '../useMoveWidow';
-import emailjs from 'emailjs-com'; // Asegúrate de importar emailjs
+import emailjs from 'emailjs-com'; 
 
 const ContactWindow = ({ onClose }) => {
   const animationProps = useSpring({
@@ -33,20 +33,17 @@ const ContactWindow = ({ onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Configuración para Email.js (reemplaza con tus propias credenciales y Service ID)
+  
     const emailjsConfig = {
       serviceId: 'service_t55pbbv',
       templateId: 'template_4vru0of',
       userId: '0hUk-nMItE2AJKP6d',
     };
-
-    // Crea un objeto con los datos del formulario y otros campos necesarios para el template
+  
     const emailData = {
       ...formData,
     };
-
-    // Envía el formulario utilizando Email.js
+  
     emailjs.send(
       emailjsConfig.serviceId,
       emailjsConfig.templateId,
@@ -54,12 +51,20 @@ const ContactWindow = ({ onClose }) => {
       emailjsConfig.userId
     )
       .then((response) => {
-        console.log('Email enviado con éxito:', response);
+        alert('¡Email enviado con éxito!');
+        
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
       })
       .catch((error) => {
-        console.error('Error al enviar el email:', error);
+        alert('¡Error al enviar el email!');
       });
   };
+  
 
   return (
     <animated.div ref={windowRef} style={animationProps} className={styles.contactWindow}>

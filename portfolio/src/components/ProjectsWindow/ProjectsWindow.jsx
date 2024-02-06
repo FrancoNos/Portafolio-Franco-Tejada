@@ -1,4 +1,3 @@
-// ProjectsWindow.jsx
 import React, { useRef, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { FaTimes } from 'react-icons/fa';
@@ -73,7 +72,7 @@ const ProjectsWindow = ({ onClose }) => {
                 <img src={ProjectImage} alt="Project" className={styles.projectImage} />
                 CarCode
               </li>
-              {/* Agrega otros proyectos aquí */}
+
             </ul>
           </div>
         </div>
@@ -82,7 +81,7 @@ const ProjectsWindow = ({ onClose }) => {
       {golBookingWindowOpen && <GolBookingWindow onClose={closeGolBookingWindow} />}
       {nearbyTourWindowOpen && <NearbyTourWindow onClose={closeNearbyTourWindow} />}
       {carCodeWindowOpen && <CarCodeWindow onClose={closeCarCodeWindow} />}
-      {/* Agrega otras ventanas de proyectos aquí */}
+
     </>
   );
 };
