@@ -103,21 +103,21 @@ textarea {
 .buttonEnviar {
   position: relative;
   left: 130px;
-  color: #ffffff; /* Cambiado a texto negro para simular el estilo de Windows XP */
-  padding: 6px 10px; /* Ajustado el relleno para que sea similar al estilo de Windows XP */
+  color: #ffffff; 
+  padding: 6px 10px; 
   background-color: #f1f1e3;
-  border: 3px solid #8ab8ec; /* Borde similar al de Windows XP */
+  border: 3px solid #8ab8ec; 
   border-radius: 4px;
   cursor: pointer;
-  font-size: 14px; /* Tamaño de fuente ajustado */
+  font-size: 14px; 
   transition: background-color 0.3s;
   color:#000000
 }
 
 
 textarea {
-  height: 80px; /* Ajusta la altura según sea necesario */
-  resize: none; /* Evita que se redimensione manualmente */
+  height: 80px; 
+  resize: none; 
 }
 
 .iconoContacto{
@@ -127,8 +127,13 @@ textarea {
 }
 
 
-@media (max-width: 600px) {
+@media (min-width: 360px) and (max-width: 740px) {
   .contactWindow {
     width: 90%;
+  }
+  .content{
+    padding: 0px;
+    flex:auto;
+    margin-top: 10px;
   }
 }

@@ -15,18 +15,18 @@ const Clock = () => {
 
   const hours = currentTime.getHours();
   const minutes = currentTime.getMinutes();
-  const ampm = hours >= 12 ? 'PM' : 'AM';
 
-  const formattedHours = hours % 12 || 12;
+  const formattedHours = hours < 10 ? `0${hours}` : hours;
   const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
 
   return (
     <div className={styles.clockContainer}>
       <span className={styles.clockText}>
-        {formattedHours}:{formattedMinutes} {ampm}
+        {formattedHours}:{formattedMinutes}
       </span>
     </div>
   );
 };
 
 export default Clock;
+
