@@ -2,6 +2,9 @@ import React from 'react';
 import styles from './StartMenu.module.css';
 import { FaLinkedin, FaGithub, FaBusinessTime, FaWhatsapp } from 'react-icons/fa';
 import { useSpring, animated } from 'react-spring';
+import { IoMdMail } from "react-icons/io";
+import userCat from "../../../public/images/userCat.jpg";
+import Login from "../../../public/images/Login.jpg";
 
 const StartMenu = ({ onClose }) => {
   const animationProps = useSpring({
@@ -48,14 +51,41 @@ const StartMenu = ({ onClose }) => {
 
   return (
     <animated.div style={animationProps} className={styles.startMenu}>
+      <div className={styles.titleContentMenu}>
+        <img src={userCat} alt="User" />
+        <p>Usuario</p>
+      </div>
+  
       <div className={styles.menuContent}>
-      <p onClick={openWhatsApp}><FaWhatsapp />¡Contáctame por WhatsApp!</p>
-        <p onClick={openLinkedIn}><FaLinkedin />LinkedIn</p>
-        <p onClick={openGitHub}><FaGithub />GitHub</p>
-        <p onClick={downloadCV}><FaBusinessTime />Descargar CV</p>
+        <a href="mailto:francotejada2014@gmail.com">
+          <p>
+            <IoMdMail /> E-mail
+          </p>
+        </a>
+        <p onClick={openWhatsApp}>
+          <FaWhatsapp /> WhatsApp
+        </p>
+        <p onClick={openLinkedIn}>
+          <FaLinkedin /> LinkedIn
+        </p>
+        <p onClick={openGitHub}>
+          <FaGithub /> GitHub
+        </p>
+        <div className={styles.pPC}>
+          <p onClick={downloadCV}>
+            <FaBusinessTime /> Descargar CV
+          </p>
+        </div>
+        <div className={styles.pCeluMenu}>
+          <p onClick={downloadCV}>
+            <FaBusinessTime /> Currículum
+          </p>
+        </div>
+        <img src={Login} alt="Login" className={styles.loginImage} />
       </div>
     </animated.div>
   );
+  
 };
 
 export default StartMenu;

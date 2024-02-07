@@ -1,57 +1,116 @@
-/* StartMenu.module.css */
 .startMenu {
     position: fixed;
     bottom: 40px;
     left: 1.5px;
-    width: 300px; /* Ajusta según sea necesario */
-    background-color: #2e7d32; /* Verde oscuro */
-    padding: 16px; /* Ajusta según sea necesario */
-    border: 2px solid #1565c0; /* Azul oscuro */
-    border-radius: 10px; /* Ajusta según sea necesario */
+    width: 100%;
+    max-width: 300px;
+    background-color: #3682da;
+    padding: 2px;
+    border: 1px solid #1565c0;
+    border-radius: 1px;
     z-index: 1001;
     font-family: 'Tahoma', sans-serif;
-    font-size: 16px; /* Ajusta según sea necesario */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ajusta según sea necesario */
-    
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.titleContentMenu {
+    padding: 10px;
+    background: linear-gradient(to bottom, #1d74d8, #74a0d3);
+    display: flex;
+    align-items: center;
+}
+
+.titleContentMenu img {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+}
+
+.titleContentMenu p {
+    margin: 0; 
+    text-align: center;
+    position: relative;
+    left: 10px;
+    color: white;
+    font-weight: bold; 
+    font-size: 16px;
+    text-shadow: 2px 2px 4px rgba(0.5, 0, 0, 0.5);
+}
+
+.menuContent {
+    background-color: #ffffff;
+    width: 100%;
 }
 
 .menuContent p {
     display: flex;
     align-items: center;
-    gap: 8px; /* Ajusta según sea necesario */
+    gap: 8px;
     margin: 0;
-    padding: 8px;
+    padding: 10px;
     cursor: pointer;
+    color: black;
+    font-size: 16px;
+}
+
+.pCeluMenu {
+    display: none;
 }
 
 .menuContent p svg {
-    width: 24px; /* Ajusta según sea necesario */
-    height: 24px; /* Ajusta según sea necesario */
+    width: 24px;
+    height: 24px;
 }
-
-
 
 .menuContent p:hover {
     background-color: #1565c0;
+    color: white;
 }
 
+.menuContentAdditional {
+    background-color: #ffffff;
+    width: 50%;
+}
 
+.loginImage {
+    width: 100%; 
+    position: relative;
+    top:10px
+  }
+  
 
 @media (max-width: 480px) {
     .startMenu {
-        width: 300px; /* Ajusta según sea necesario */
-        height: 200px;
-        font-size: 14px; /* Ajusta según sea necesario */
-        padding: 12px; /* Ajusta según sea necesario */
+        width: 80%; 
+        max-width: none;
+        font-size: 14px;
+        padding: 2px;
     }
-
+    .titleContentMenu {
+        padding: 12px;
+        flex-direction: row; /* Ajuste importante para colocar elementos uno al lado del otro */
+    }
+    .menuContent,
+    .menuContentAdditional {
+        width: 100%;
+    }
     .menuContent p {
-        padding: 12px; /* Ajusta según sea necesario */
-        font-size: 18px; /* Ajusta según sea necesario */
+        padding: 12px;
+        font-size: 18px;
     }
 
     .menuContent p svg {
-        width: 30px; /* Ajusta según sea necesario */
-        height: 30px; /* Ajusta según sea necesario */
+        width: 30px;
+        height: 30px;
+    }
+
+    .pCeluMenu {
+        display: initial;
+    }
+
+    .pPC {
+        display: none;
     }
 }

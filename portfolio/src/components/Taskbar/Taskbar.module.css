@@ -1,5 +1,5 @@
 .taskbar {
-  background-color: #017ACD;
+  background: linear-gradient(to bottom, #1d74d8, #0171bb, #1d74d8);
   height: 40px;
   display: flex;
   align-items: center;
