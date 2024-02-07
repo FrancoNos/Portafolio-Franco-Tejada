@@ -12,7 +12,7 @@ import IconoProjects from '../Projects/IconoProjects ';
 import IconoCursos from '../IconoCursos/IconoCursos';
 
 const Desktop = () => {
-  const [openWindow, setOpenWindow] = useState('aboutMe'); // Inicializar con 'aboutMe'
+  const [openWindow, setOpenWindow] = useState('aboutMe'); 
 
   const openAboutMeWindow = () => {
     setOpenWindow('aboutMe');
@@ -35,9 +35,8 @@ const Desktop = () => {
   };
 
   useEffect(() => {
-    // Este efecto se ejecuta solo en el montaje y abrirá la ventana 'aboutMe'
     openAboutMeWindow();
-  }, []); // El segundo parámetro, [] (un array vacío), asegura que se ejecute solo en el montaje
+  }, []); 
 
   return (
     <div className={styles.desktop}>

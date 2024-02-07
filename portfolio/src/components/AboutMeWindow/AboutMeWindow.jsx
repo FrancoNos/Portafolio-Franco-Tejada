@@ -44,9 +44,10 @@ const AboutMeWindow = ({ onClose }) => {
           <div className={styles.content}>
             
             <h3 className={styles.text}>Portafolio Web <br/>Franco Tejada</h3>
+            <h3 className={styles.textMovilAbout}> Versión móvil</h3>
             <div className={styles.iconContainer}>
-<p className={styles.pCompu}>¡Bienvenido a mi portafolio web! A la derecha, podrás explorar más sobre mí, mis pasiones y estudios. No olvides contactarme haciendo clic en "Contacto" o clickear en Inicio para encontrarme en otras redes.<br/> ¡Gracias por visitar mi página web!</p>
-<p className={styles.pPC}>¡Bienvenido! A la derecha, podrás explorar más sobre mí. No olvides contactarme haciendo clic en "Contacto" o clickear en Inicio. <br/> ¡Gracias por la visita!</p>
+<p className={styles.pCompu}>¡Bienvenido a mi portafolio web! A la derecha podrás explorar más sobre mí, mis pasiones y estudios. No olvides contactarme haciendo clic en "Contacto" o clickear en Inicio para encontrarme en otras redes.<br/> ¡Gracias por visitar mi página web!</p>
+<p className={styles.pPC}>¡Bienvenido a la versión móvil de mi portafolio web! A la derecha podrás explorar más sobre mí. No olvides contactarme haciendo clic en "Contacto" o clickear en Inicio (solo  adaptado para usarlo en vertical).</p>
             </div>
           </div>
           <div className={styles.content2}>
