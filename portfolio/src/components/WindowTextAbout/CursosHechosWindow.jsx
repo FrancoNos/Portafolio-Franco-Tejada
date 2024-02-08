@@ -3,7 +3,7 @@ import styles from './TextWidow.module.css';
 import useMoveWindow from '../useMoveWidow';
 import { FaTimes } from 'react-icons/fa';
 
-const TextWindow = ({ onClose }) => {
+const CursosHechos = ({ onClose }) => {
   const windowRef = useRef();
   const moveHandler = useMoveWindow({ id: 'textWindow', focus: () => {}, onClose }, windowRef);
 
@@ -19,14 +19,14 @@ const TextWindow = ({ onClose }) => {
         <div className={styles.content}>
           <h3>Bienvenido/a.</h3>
           <p className={styles.pText}>
-            ¡Hola! Soy Franco, un apasionado programador web de Buenos Aires, Argentina.  <br/>Disfruto de buscar soluciones a los desafíos que se me presentan a lo largo del camino, tanto en el aspecto técnico como en la vida misma. Esta web es un reflejo de lo que tenía en mi mente y me propuse a hacer, considero que no es mucho pero es trabajo honesto. 
-             
+           EL PEPE
              </p>
+            
         </div>
       </div>
     </div>
   );
 };
 
-export default TextWindow;
+export default CursosHechos;
 

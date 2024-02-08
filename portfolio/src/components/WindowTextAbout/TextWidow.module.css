@@ -80,6 +80,11 @@
     color: #333; 
     margin-bottom: 20px;
   }
+
+  .Lain{
+    width: 200px;
+    height: 200px;
+  }
   
   
   @media (max-width: 600px) {
