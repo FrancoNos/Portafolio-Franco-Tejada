@@ -63,41 +63,53 @@
   margin-top: 16px;
 }
 
-.content, .content2 {
+.content, .content2Window {
   margin-top: 16px;
-  flex: 1;
-  background-color: #d4e8fc; 
-  border: 1px solid #a0a0a0; 
+  flex: 111;
+  background-color: #d4e8fc; /* Fondo similar a Windows XP */
+  border: 1px solid #a0a0a0; /* Borde similar a Windows XP */
   border-radius: 4px;
   padding: 8px;
   text-align: center;
 }
 
-.content2 {
-  margin-left: 16px; 
-  background-color:#ffffff;
+.content2Window {
+  background-color: #ffffff; 
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   justify-content: center; 
-  align-items: center; 
+  align-items: center;
+  margin-left: 16px; 
+  outline: none; /* Agrega esta línea */
 }
 
-.content, .content2 .text{
+.content, .content2Window .text{
   font-family: 'Tahoma', sans-serif;
+
 }
 
-.content2 .text{
-  font-family: 'Tahoma', sans-serif;
-  bottom:20px;
-  position: relative;
-}
-
-.content2 img{
-  width: 50px; 
+.content2Window img {
+  width: 50px;
   height: auto; 
-  max-width: 50px;
-  display: block;
-  cursor: pointer;
+  max-width: 100%;
+position: relative;
+top:15px;
+cursor: pointer;
+}
+
+/* Estilos para el texto dentro del botón */
+.content2Window .text {
+  font-family: 'Tahoma', sans-serif;
+  font-size: 16px;
+}
+
+
+
+p {
+  font-size: 16px; 
+  line-height: 1.4; 
+  color: #1d1b1b; 
+  margin-bottom: 20px; 
 }
 
 .iconContainer {

@@ -8,7 +8,10 @@ import TextImage from '../../../public/images/text.png';
 import TextWindow from '../WindowTextAbout/TextWidow';
 import iconoSobreMi from '../../../public/images/papelera.png';
 import CursosHechos from '../WindowTextAbout/CursosHechosWindow';
+import InfoWindow from '../WindowTextAbout/InfoWindow';
 import Documents from '../../../public/images/documents.png';
+import Info from '../../../public/images/info.png';
+
 
 const AboutMeWindow = ({ onClose }) => {
   const animationProps = useSpring({
@@ -23,6 +26,7 @@ const AboutMeWindow = ({ onClose }) => {
 
   const [textWindowOpen, setTextWindowOpen] = useState(false);
   const [cursosWindowOpen, setCursosWindowOpen] = useState(false);
+  const [infoWindowOpen, setInfoWindowOpen] = useState(false);
 
   const openTextWindow = () => {
     setTextWindowOpen(true);
@@ -31,7 +35,11 @@ const AboutMeWindow = ({ onClose }) => {
   const openCursosWindow = () => {
     setCursosWindowOpen(true);
   };
-  
+
+  const openInfoWindow = () => {
+    setInfoWindowOpen(true);
+  };
+
   const closeTextWindow = () => {
     setTextWindowOpen(false);
   };
@@ -39,6 +47,11 @@ const AboutMeWindow = ({ onClose }) => {
   const closeCursosWindow = () => {
     setCursosWindowOpen(false);
   };
+
+  const closeInfoWindow = () => {
+    setInfoWindowOpen(false);
+  };
+
 
   return (
     <>
@@ -62,17 +75,22 @@ const AboutMeWindow = ({ onClose }) => {
           <div className={styles.content2}>
             <img src={TextImage} onClick={openTextWindow} alt="Texto" />
             <p className={styles.text} onClick={openTextWindow}>
-              text.txt
+              Bienvenido.txt
             </p>
             <img src={Documents} onClick={openCursosWindow} alt="Cursos" />
             <p className={styles.text} onClick={openCursosWindow}>
               Cursos.txt
+            </p>
+            <img src={Info} onClick={openInfoWindow} alt="Info" />
+            <p className={styles.text} onClick={openInfoWindow}>
+              Info-sobre-mi.txt
             </p>
           </div>
         </div>
       </animated.div>
       {textWindowOpen && <TextWindow onClose={closeTextWindow} />}
       {cursosWindowOpen && <CursosHechos onClose={closeCursosWindow} />}
+      {infoWindowOpen && <InfoWindow onClose={closeInfoWindow} />}
     </>
   );
 };

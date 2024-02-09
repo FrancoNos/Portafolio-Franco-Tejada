@@ -10,7 +10,7 @@ const TextWindow = ({ onClose }) => {
   return (
     <div ref={windowRef} className={`${styles.TextWindow} ${styles.textWindow}`} onMouseDown={moveHandler.onMouseDown}>
       <div className={styles.titleContainer}>
-        <span>Contenido de Text.txt</span>
+        <span>Recepción</span>
         <button onClick={onClose} className={styles.closeButton}>
             <FaTimes />
           </button>
