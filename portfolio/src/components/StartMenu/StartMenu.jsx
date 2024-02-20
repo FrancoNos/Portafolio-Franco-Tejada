@@ -53,7 +53,7 @@ const StartMenu = ({ onClose }) => {
     <animated.div style={animationProps} className={styles.startMenu}>
       <div className={styles.titleContentMenu}>
         <img src={userCat} alt="User" />
-        <p>Usuario</p>
+        <p>Franco Tejada</p>
       </div>
   
       <div className={styles.menuContent}>

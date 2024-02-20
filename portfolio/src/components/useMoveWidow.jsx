@@ -27,26 +27,21 @@ const useMoveWindow = (props, windowRef) => {
   const handleMouseUp = () => {
     setIsDragging(false);
 
-    // Obtén el zIndex actual de la ventana
     const currentZIndex = parseInt(windowRef.current.style.zIndex || 1, 10);
 
-    // Incrementa el zIndex solo cuando la ventana comienza a ser arrastrada
     windowRef.current.style.zIndex = currentZIndex + 5;
 
     window.removeEventListener('mousemove', handleMouseMove);
     window.removeEventListener('mouseup', handleMouseUp);
 
-    // Actualizar la posición de la ventana localmente (puedes ajustar esto según tus necesidades)
     const { top, left } = windowRef.current.getBoundingClientRect();
     props.onMove({ id: props.id, top, left });
   };
 
   useEffect(() => {
     if (isDragging) {
-      // Obtén el zIndex actual de la ventana
       const currentZIndex = parseInt(windowRef.current.style.zIndex || 1, 10);
 
-      // Incrementa el zIndex solo cuando la ventana comienza a ser arrastrada
       windowRef.current.style.zIndex = currentZIndex + 1;
 
       window.addEventListener('mousemove', handleMouseMove);

@@ -19,7 +19,8 @@ const InfoWindow = ({ onClose }) => {
         <div className={styles.content}>
           <h3>Un rinconcito.</h3>
           <p className={styles.pText}>
-ETE SECH             </p>
+Estudié la carrera de Guía de Turismo durante 5 años, se me presentó la oportunidad de estudiar programación mediante un programa de estudios llamado Argentina Programa y acá estamos, totalmente inmerso en el mundo del desarrollo web. <br/>  
+Soy una persona con diversos hobbies, aparte de programar me gusta mucho jugar al fútbol o ver animaciones. Me gusta aprender sobre diferentes culturas, idiomas, formas de vivir... En general me gusta relacionarme con gente distinta a mí para intercambiar ideas.            </p>
             
         </div>
       </div>

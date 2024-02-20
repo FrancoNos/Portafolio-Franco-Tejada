@@ -25,7 +25,6 @@
   background-color: #3682da; 
   border-bottom: 2px solid #64a2d8; 
   cursor: pointer;
-  
 }
 
 .titleContainer span {
@@ -33,6 +32,51 @@
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+.textSkills{
+  font-weight: bold;
+  text-decoration: underline;
+
+}
+
+.IoLogoJavascript:hover{
+color:rgb(180, 180, 21);
+cursor: pointer;
+}
+
+.SiNextdotjs:hover{
+  color:rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.SiTypescript:hover{
+  color:rgb(21, 58, 180);
+cursor: pointer;
+}
+
+.IoLogoFirebase:hover{
+  color: orange;
+  cursor: pointer;
+}
+
+.SiTailwindcss:hover{
+  color: aqua;
+  cursor: pointer;
+}
+
+.FaNodeJs:hover{
+  color: green;
+  cursor: pointer;
+}
+
+.link{
+  color: #333333;
+}
+
+.link:hover{
+  color: #333333;
+}
+
 
 .closeButton {
   position: relative;
@@ -65,9 +109,9 @@
 
 .content, .content2Window {
   margin-top: 16px;
-  flex: 111;
-  background-color: #d4e8fc; /* Fondo similar a Windows XP */
-  border: 1px solid #a0a0a0; /* Borde similar a Windows XP */
+  flex: 1; 
+  background-color: #d4e8fc;
+  border: 1px solid #a0a0a0;
   border-radius: 4px;
   padding: 8px;
   text-align: center;
@@ -80,51 +124,48 @@
   justify-content: center; 
   align-items: center;
   margin-left: 16px; 
-  outline: none; /* Agrega esta línea */
+  outline: none; 
 }
 
 .content, .content2Window .text{
   font-family: 'Tahoma', sans-serif;
-
 }
 
 .content2Window img {
   width: 50px;
   height: auto; 
   max-width: 100%;
-position: relative;
-top:15px;
-cursor: pointer;
+  position: relative;
+  top: 15px;
+  cursor: pointer;
 }
 
-/* Estilos para el texto dentro del botón */
 .content2Window .text {
   font-family: 'Tahoma', sans-serif;
   font-size: 16px;
 }
 
-
-
 p {
   font-size: 16px; 
   line-height: 1.4; 
   color: #1d1b1b; 
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
+   
 }
 
 .iconContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center; 
+  margin-top: 8px;
 }
 
 .iconContainer svg {
-  flex-basis: calc(33.33% - 8px);
-  margin-bottom: 8px;
+  margin: 0 8px 8px 0; 
   font-size: 44px;
 }
 
-.iconoCursosImage{
+.iconoCursosImage {
   height: 20px;
   width: 20px;
   margin-left: 5px;

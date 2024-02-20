@@ -1,7 +1,7 @@
 .NeabyTourWindow {
   position: fixed;
-  top: 45%;
-  left: 45%;
+  top: 47%;
+  left: 47%;
   transform: translate(-50%, -50%);
   width: 80%;
   max-width: 400px;
@@ -31,6 +31,17 @@
   margin-left: 10px;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.pGolBooking{
+  padding: 5px;
+}
+
+.youtube{
+  color: #ff0000;
+  position: relative;
+  top: 10px;
+  font-size: 30px; 
 }
 
 .closeButton {

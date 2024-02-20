@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { FaTimes } from 'react-icons/fa';
+import { FaTimes, FaCar, FaYoutube  } from 'react-icons/fa';
 import { animated } from 'react-spring'; 
 import useMoveWindow from '../../useMoveWidow';
 import useWindowAnimation from './useWindowAnimation.jsx';
@@ -30,16 +30,16 @@ const CarCodeWindow = ({ onClose }) => {
     <>
       <animated.div ref={windowRef} style={animationProps} className={`${styles.CarCodeWindow} ${styles.NeabyTourWindow}`}>
         <div className={styles.titleContainer} onMouseDown={moveHandler.onMouseDown}>
-          <span>CarCodeWindow</span>
+          <span>CarCode</span>
           <button onClick={onClose} className={styles.closeButton}>
             <FaTimes />
           </button>
         </div>
         <div className={styles.contentContainer}>
           <div className={styles.content}>
-            <h3>CarCodeWindow</h3>
-            <p>
-              Contenido específico de CarCodeWindow.
+            <h3>CarCode <FaCar /></h3>
+            <p className={styles.pGolBooking}>
+              Proyecto final e-commerce del bootcamp de SoyHenry, donde usamos tecnologías como Node.js, PostgreSQL, React, React-Redux, CSS, JWT, Passport, Auth0, integraciones de billetera y servicios de implementación (tanto para el frontend como para el backend).
             </p>
             <div className={styles.imageGolBookingContainer} onClick={openLightbox}>
               <img
@@ -49,10 +49,10 @@ const CarCodeWindow = ({ onClose }) => {
               />
             </div>
             <p>
-              Explora más sobre CarCode en vivo: <a href="https://carcode.vercel.app/" target="_blank" rel="noopener noreferrer">CarCode</a>
+<a href="https://code-car-41a-pf-7u9q.vercel.app/" target="_blank" rel="noopener noreferrer">CarCode</a>
             </p>
             <p>
-              Descubre más sobre el proyecto en este video de YouTube: <a href="https://www.youtube.com/watch?v=your-video-id" target="_blank" rel="noopener noreferrer">Video de YouTube</a>
+              <a href="https://www.youtube.com/watch?v=KmPVvh21pFQ" target="_blank" rel="noopener noreferrer">Video de YouTube <FaYoutube className={styles.youtube}/></a>
             </p>
           </div>
         </div>
