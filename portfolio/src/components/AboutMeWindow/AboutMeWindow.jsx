@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { FaTimes } from 'react-icons/fa';
 import ReiWallpaper from "../../../public/images/reiwallpaper.png";
-
+import Wallpaper from "../../../public/images/Wallpaper.jpg";
 import styles from './AboutMeWindow.module.css';
 import useMoveWindow from '../useMoveWidow';
 import TextImage from '../../../public/images/text.png';
@@ -24,17 +24,13 @@ const AboutMeWindow = ({ onClose, onWallpaperChange }) => {
     config: { tension: 300, friction: 20 },
   });
 
-  const changeWallpaper = () => {
-    const newWallpaperUrl = ReiWallpaper;
-    onWallpaperChange(newWallpaperUrl);
-  };
-  
   const windowRef = useRef();
   const moveHandler = useMoveWindow({ id: 'aboutMeWindow', focus: () => {}, onClose }, windowRef);
 
   const [textWindowOpen, setTextWindowOpen] = useState(false);
   const [cursosWindowOpen, setCursosWindowOpen] = useState(false);
   const [infoWindowOpen, setInfoWindowOpen] = useState(false);
+  const [isReiWallpaper, setIsReiWallpaper] = useState(false);
 
   const openTextWindow = () => {
     setTextWindowOpen(true);
@@ -58,6 +54,14 @@ const AboutMeWindow = ({ onClose, onWallpaperChange }) => {
 
   const closeInfoWindow = () => {
     setInfoWindowOpen(false);
+  };
+
+  const changeWallpaper = () => {
+    // Cambiar entre Wallpaper y ReiWallpaper
+    const newWallpaperUrl = isReiWallpaper ? Wallpaper : ReiWallpaper;
+    onWallpaperChange(newWallpaperUrl);
+    // Actualizar el estado para reflejar el cambio
+    setIsReiWallpaper(!isReiWallpaper);
   };
 
 
