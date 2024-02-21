@@ -91,7 +91,7 @@
     }
     .titleContentMenu {
         padding: 12px;
-        flex-direction: row; /* Ajuste importante para colocar elementos uno al lado del otro */
+        flex-direction: row; 
     }
     .menuContent,
     .menuContentAdditional {

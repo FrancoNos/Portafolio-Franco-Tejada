@@ -1,4 +1,3 @@
-// StartButton.js
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './StartButton.module.css';
 import Inicio from "/images/Inicio.jpg";
@@ -14,7 +13,6 @@ const StartButton = () => {
 
   const handleDocumentClick = (event) => {
     if (startButtonRef.current && !startButtonRef.current.contains(event.target)) {
-      // Cerrar el menú si se hace clic fuera del botón de inicio
       setIsStartMenuOpen(false);
     }
   };

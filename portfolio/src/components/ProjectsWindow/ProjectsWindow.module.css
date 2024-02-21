@@ -22,8 +22,8 @@
   left: 0;
   width: 100%;
   height: 35px;
-  background-color: #3682da; /* Azul más suave */
-  border-bottom: 2px solid #64a2d8; /* Línea inferior para simular el estilo de Windows XP */
+  background-color: #3682da; 
+  border-bottom: 2px solid #64a2d8; 
   cursor: pointer;
   
 }
@@ -67,33 +67,33 @@
   margin-top: 16px;
   flex: 1;
   border-radius: 4px;
-  border: 1px solid #a0a0a0; /* Borde similar a Windows XP */
+  border: 1px solid #a0a0a0; 
   padding: 8px;
   background-color: #ffffff;
   display: flex;
-  flex-direction: column; /* Cambia a columna para alinear elementos verticalmente */
+  flex-direction: column;
 }
 
 .content ul {
-  list-style: none; /* Quita los estilos de lista por defecto */
-  padding: 0; /* Elimina el relleno predeterminado de la lista */
+  list-style: none;
+  padding: 0; 
   display: flex;
-  flex-direction: row; /* Cambia a fila para alinear elementos horizontalmente */
-  justify-content: space-around; /* Espacia los elementos de la lista en el contenedor */
-  align-items: flex-start; /* Alinea los elementos en la parte superior del contenedor */
+  flex-direction: row; 
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 .content ul li {
   cursor: pointer;
-  display: flex; /* Mantiene el diseño de fila para los elementos de la lista */
-  flex-direction: column; /* Cambia a columna para alinear elementos verticalmente */
-  align-items: center; /* Centra los elementos horizontalmente */
-  text-align: center; /* Centra el texto horizontalmente */
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center;
 }
 
 .projectImage {
-  margin-bottom: 8px; /* Añade espacio entre la imagen y el texto */
-  width: 50px; /* Ajusta el tamaño de la imagen según sea necesario */
+  margin-bottom: 8px;
+  width: 50px; 
   height: auto;
 }
 
@@ -103,7 +103,6 @@
   margin-left: 5px;
 }
 
-/* Media query para hacerlo responsive en pantallas más pequeñas */
 @media (max-width: 600px) {
   .projectsWindow {
     width: 90%;

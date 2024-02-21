@@ -57,10 +57,8 @@ const AboutMeWindow = ({ onClose, onWallpaperChange }) => {
   };
 
   const changeWallpaper = () => {
-    // Cambiar entre Wallpaper y ReiWallpaper
     const newWallpaperUrl = isReiWallpaper ? Wallpaper : ReiWallpaper;
     onWallpaperChange(newWallpaperUrl);
-    // Actualizar el estado para reflejar el cambio
     setIsReiWallpaper(!isReiWallpaper);
   };
 
