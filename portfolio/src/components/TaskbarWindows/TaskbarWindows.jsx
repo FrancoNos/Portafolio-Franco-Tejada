@@ -1,4 +1,3 @@
-// TaskbarWindows.jsx
 import React from 'react';
 import styles from './TaskbarWindows.module.css';
 
@@ -12,15 +11,13 @@ const windowIcons = {
   contact: ImagenContacto,
   projects: ImagenProyectos,
   cursos: ImagenCursos,
-  // Agrega más nombres según sea necesario
 };
 
 const windowTexts = {
   aboutMe: "Sobre Mí",
   contact: "Contacto",
   projects: "Proyectos",
-  cursos: "Cursos",
-  // Agrega más nombres según sea necesario
+  cursos: "Habilidades",
 };
 
 const TaskbarWindows = ({ windows, activeWindow, setActiveWindow, closeWindow }) => {
@@ -43,7 +40,6 @@ const TaskbarWindows = ({ windows, activeWindow, setActiveWindow, closeWindow })
               closeWindow();
             }}
           >
-            {/* Muestra el texto junto al icono */}
             <img src={windowIcons[windowId]} alt={windowId} />
             <span>{windowTexts[windowId]}</span>
           </div>

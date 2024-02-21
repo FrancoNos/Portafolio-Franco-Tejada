@@ -18,5 +18,6 @@
 @media (max-width: 768px) {
   .desktop {
     height: 100vh; 
+    overflow: hidden;
   }
 }

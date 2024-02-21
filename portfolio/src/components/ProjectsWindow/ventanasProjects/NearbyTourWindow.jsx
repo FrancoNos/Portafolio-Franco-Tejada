@@ -42,7 +42,7 @@ const NearbyTourWindow = ({ onClose }) => {
           <div className={styles.content}>
             <h3>NearbyTour <FaHotel/> </h3>
             <p className={styles.pGolBooking}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quia adipisci aliquam sapiente ex ad, iure id suscipit alias nemo debitis voluptatum saepe! Unde consequatur sunt reprehenderit eius, dolore id!
+              Proyecto realizado en conjunto con un equipo excelente. La finalidad de la página es buscar atractivos turísticos de Sudamérica, con su sistema de usuarios, comentarios, rankings, etc. <br/>Colaboré en el equipo de front end, tanto para la estética como para las funcionalidades y llamadas a la API.
             </p>
             <div className={styles.imageGolBookingContainer} onClick={toggleImageSize}>
               <img

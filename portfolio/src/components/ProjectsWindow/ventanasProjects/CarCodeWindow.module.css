@@ -1,7 +1,7 @@
 .CarCodeWindow {
     position: fixed;
-    top: 55%;
-    left: 55%;
+    top: 52%;
+    left: 52%;
     transform: translate(-50%, -50%);
     width: 80%;
     max-width: 400px;

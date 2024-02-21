@@ -104,14 +104,15 @@ const CursosWindow = ({ onClose }) => {
       </div>
     </div>
   </div>
-
   <div className={styles.content2Window}>
     <img src={Applications} onClick={openSoftSkillsWindow} alt="Soft Skills" />
     <p className={styles.text} onClick={openSoftSkillsWindow}>Soft Skills.txt</p>
 
     {softSkillsWindowOpen && <SoftSkills onClose={closeSoftSkillsWindow} />}
   </div>
+
 </div>
+
 
     </animated.div>
     

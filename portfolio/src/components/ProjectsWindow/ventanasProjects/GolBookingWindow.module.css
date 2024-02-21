@@ -1,7 +1,7 @@
 .GolBookingWindow {
     position: fixed;
-    top: 52%;
-    left: 52%;
+    top: 51%;
+    left: 51%;
     transform: translate(-50%, -50%);
     width: 80%;
     max-width: 400px;

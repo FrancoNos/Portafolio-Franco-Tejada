@@ -1,7 +1,7 @@
 .NeabyTourWindow {
   position: fixed;
-  top: 47%;
-  left: 47%;
+  top: 49%;
+  left: 49%;
   transform: translate(-50%, -50%);
   width: 80%;
   max-width: 400px;

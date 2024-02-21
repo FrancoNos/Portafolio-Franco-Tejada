@@ -9,8 +9,8 @@ const InfoWindow = ({ onClose }) => {
   const moveHandler = useMoveWindow({ id: 'textWindow', focus: () => {}, onClose }, windowRef);
 
   return (
-    <div ref={windowRef} className={`${styles.TextWindow} ${styles.textWindow}`} onMouseDown={moveHandler.onMouseDown}>
-      <div className={styles.titleContainer}>
+    <div ref={windowRef} className={`${styles.TextWindow} ${styles.textWindow}`} >
+      <div className={styles.titleContainer} onMouseDown={moveHandler.onMouseDown}>
       <img src={Info} alt="Info" className={styles.Info} />
         <span>Información sobre mí</span>
         <button onClick={onClose} className={styles.closeButton}>

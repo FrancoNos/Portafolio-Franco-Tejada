@@ -15,8 +15,8 @@ const CursosHechos = ({ onClose }) => {
   };
 
   return (
-    <div ref={windowRef} className={`${styles.TextWindow} ${styles.textWindow}`} onMouseDown={moveHandler.onMouseDown}>
-      <div className={styles.titleContainer}>
+    <div ref={windowRef} className={`${styles.TextWindow} ${styles.textWindow}`} >
+      <div className={styles.titleContainer} onMouseDown={moveHandler.onMouseDown}>
       <img src={Documents} alt="Documents" className={styles.Documents} />
         <span>Cursos</span>
         <button onClick={onClose} className={styles.closeButton}>
