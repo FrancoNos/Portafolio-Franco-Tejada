@@ -12,7 +12,8 @@ import IconoProjects from '../Projects/IconoProjects ';
 import IconoCursos from '../IconoCursos/IconoCursos';
 
 const Desktop = () => {
-  const [openWindow, setOpenWindow] = useState('aboutMe'); 
+  const [openWindow, setOpenWindow] = useState('aboutMe');
+  const [wallpaperUrl, setWallpaperUrl] = useState(Wallpaper);
 
   const openAboutMeWindow = () => {
     setOpenWindow('aboutMe');
@@ -34,36 +35,27 @@ const Desktop = () => {
     setOpenWindow(null);
   };
 
+  const handleWallpaperChange = (newWallpaperUrl) => {
+    setWallpaperUrl(newWallpaperUrl);
+  };
+
   useEffect(() => {
-    const checkOrientation = () => {
-      const isPortrait = window.matchMedia('(orientation: portrait)').matches;
+    openAboutMeWindow();
+  }, []); 
 
-      if (!isPortrait) {
-        alert('Gire su dispositivo a orientación vertical para ver la aplicación correctamente.');
-      }
-    };
-
-    // Verificar la orientación al cargar la página
-    checkOrientation();
-
-    // Agregar el listener para el cambio de orientación
-    window.addEventListener('orientationchange', checkOrientation);
-
-    // Eliminar el listener cuando el componente se desmonta para evitar posibles pérdidas de memoria
-    return () => {
-      window.removeEventListener('orientationchange', checkOrientation);
-    };
-  }, []); // El array vacío asegura que el efecto se ejecute solo una vez al montar el componente
+  useEffect(() => {
+    setWallpaperUrl(Wallpaper); 
+  }, []); 
 
   return (
     <div className={styles.desktop}>
-      <img className={styles.wallpaper} src={Wallpaper} alt="Wallpaper" />
+      <img className={styles.wallpaper} src={wallpaperUrl} alt="Wallpaper" />
       <SobreMi onClick={openAboutMeWindow} />
       <IconoContacto onClick={openContactWindow} />
       <IconoProjects onClick={openProjectsWindow} />
       <IconoCursos onClick={openCursosWindow} />
       <Taskbar openWindows={[openWindow]} closeWindow={closeWindow} />
-      {openWindow === 'aboutMe' && <AboutMeWindow onClose={closeWindow} />}
+      {openWindow === 'aboutMe' && <AboutMeWindow onClose={closeWindow} onWallpaperChange={handleWallpaperChange} />}
       {openWindow === 'contact' && <ContactWindow onClose={closeWindow} />}
       {openWindow === 'projects' && <ProjectsWindow onClose={closeWindow} />}
       {openWindow === 'cursos' && <CursosWindow onClose={closeWindow} />}

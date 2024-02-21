@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { FaTimes } from 'react-icons/fa';
+import ReiWallpaper from "../../../public/images/reiwallpaper.png";
 
 import styles from './AboutMeWindow.module.css';
 import useMoveWindow from '../useMoveWidow';
@@ -11,9 +12,11 @@ import CursosHechos from '../WindowTextAbout/CursosHechosWindow';
 import InfoWindow from '../WindowTextAbout/InfoWindow';
 import Documents from '../../../public/images/documents.png';
 import Info from '../../../public/images/info.png';
+import Rei from '../../../public/images/Rei.png';
 
 
-const AboutMeWindow = ({ onClose }) => {
+
+const AboutMeWindow = ({ onClose, onWallpaperChange }) => {
   const animationProps = useSpring({
     opacity: 1,
     transform: 'translate(-50%, -50%) scale(1)',
@@ -21,6 +24,11 @@ const AboutMeWindow = ({ onClose }) => {
     config: { tension: 300, friction: 20 },
   });
 
+  const changeWallpaper = () => {
+    const newWallpaperUrl = ReiWallpaper;
+    onWallpaperChange(newWallpaperUrl);
+  };
+  
   const windowRef = useRef();
   const moveHandler = useMoveWindow({ id: 'aboutMeWindow', focus: () => {}, onClose }, windowRef);
 
@@ -73,6 +81,7 @@ const AboutMeWindow = ({ onClose }) => {
             </div>
           </div>
           <div className={styles.content2}>
+
             <img src={TextImage} onClick={openTextWindow} alt="Texto" />
             <p className={styles.text} onClick={openTextWindow}>
               Bienvenido.txt
@@ -84,6 +93,10 @@ const AboutMeWindow = ({ onClose }) => {
             <img src={Info} onClick={openInfoWindow} alt="Info" />
             <p className={styles.text} onClick={openInfoWindow}>
               Info-sobre-mi.txt
+            </p>
+            <img src={Rei} onClick={changeWallpaper} alt="Fondo" />
+            <p className={styles.text} onClick={changeWallpaper}>
+              ¡Cambiar fondo!
             </p>
           </div>
         </div>
