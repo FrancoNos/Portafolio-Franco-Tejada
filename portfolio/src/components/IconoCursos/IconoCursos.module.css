@@ -1,4 +1,3 @@
-/* IconoCursos.module.css */
 .iconoCursosContainer {
   position: fixed;
   top: 10px;
@@ -9,7 +8,7 @@
 .iconoCursos {
   width: 70px;
   height: 70px;
-  /* Agrega otros estilos según sea necesario */
+ 
 }
 
 .iconoCursos:hover {
@@ -19,8 +18,24 @@
 
 .label {
   font-size: 14px;
-  margin-top: -10px; /* Ajusta la posición vertical del texto */
+  margin-top: -10px; 
   color: white;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Ajusta según sea necesario */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); 
 
+}
+
+@media (max-width: 768px) {
+
+  .iconoCursos {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 10px;
+  }
+  .label {
+    position: relative;
+    font-size: 20px; 
+    left: 10px;
+
+  }
 }

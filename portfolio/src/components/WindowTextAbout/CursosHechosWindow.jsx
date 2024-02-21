@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import styles from './TextWidow.module.css';
 import useMoveWindow from '../useMoveWidow';
 import { FaTimes } from 'react-icons/fa';
+import Documents from '../../../public/images/documents.png';
 
 const CursosHechos = ({ onClose }) => {
   const windowRef = useRef();
@@ -16,6 +17,7 @@ const CursosHechos = ({ onClose }) => {
   return (
     <div ref={windowRef} className={`${styles.TextWindow} ${styles.textWindow}`} onMouseDown={moveHandler.onMouseDown}>
       <div className={styles.titleContainer}>
+      <img src={Documents} alt="Documents" className={styles.Documents} />
         <span>Cursos</span>
         <button onClick={onClose} className={styles.closeButton}>
           <FaTimes />

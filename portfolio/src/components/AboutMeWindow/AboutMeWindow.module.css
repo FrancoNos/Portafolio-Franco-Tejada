@@ -126,8 +126,7 @@ p {
 
 @media (max-width: 600px) {
   .aboutMeWindow {
-    width: 90%;
-
+    width: 100%;
   }
   p {
     font-size: 14px; 

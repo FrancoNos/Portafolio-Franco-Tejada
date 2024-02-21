@@ -36,7 +36,27 @@ const Desktop = () => {
 
   useEffect(() => {
     openAboutMeWindow();
-  }, []); 
+
+    const handleOrientationChange = () => {
+      const isPortrait = window.matchMedia('(orientation: portrait)').matches;
+
+      if (!isPortrait) {
+        // Cambiar a la orientación vertical (portrait) si es horizontal
+        document.body.style.transform = 'rotate(90deg)';
+        document.body.style.transformOrigin = 'left top';
+        document.body.style.width = '100vh';
+        document.body.style.height = '100vw';
+      }
+    };
+
+    // Agregar el listener para el cambio de orientación
+    window.addEventListener('orientationchange', handleOrientationChange);
+
+    // Eliminar el listener cuando el componente se desmonta para evitar posibles pérdidas de memoria
+    return () => {
+      window.removeEventListener('orientationchange', handleOrientationChange);
+    };
+  }, []); // El array vacío asegura que el efecto se ejecute solo una vez al montar el componente
 
   return (
     <div className={styles.desktop}>
